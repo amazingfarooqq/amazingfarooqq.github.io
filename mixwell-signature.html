@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        @font-face {
+            font-family: 'IvyMode';
+            src:             url('https://bidderwin.com/fonts/IvyMode-Regular.ttf') format('truetype');
+
+        }
+
+        * , html{
+            font-family: sans-serif;
+        }
+
+        .signature-container {
+            max-width: 600px;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        .signature {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+
+        .signature:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .name {
+            color: #0B2F29;
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-family: 'IvyMode', sans-serif;
+
+        }
+
+        .title {
+            color: #e18e36;
+            font-size: 14px;
+            margin-bottom: 12px;
+            font-weight: 300;
+
+        }
+
+        .contact-info {
+            font-size: 13px;
+            color: #000;
+            line-height: 1.6;
+
+        }
+
+        .contact-info a , .location{
+            font-weight: 300;
+
+            color: #0B2F29;
+            text-decoration: none;
+
+        }
+
+        .contact-label {
+            font-weight: 400;
+            color: #e18e36;
+        }
+
+        .disclaimer {
+            border-top: 2px solid #ae691e;
+            padding-top: 15px;
+            font-size: 11px;
+            color: #0b2f29aa;
+            line-height: 1.4;
+            max-width: 580px;
+
+        }
+
+        .logo {
+            padding: 10px 0px;
+            width: 170px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="signatures" class="signature-container"></div>
+
+    <script>
+        const globalData = {
+            website: "mixwellcompounding.ae",
+            location: "Al Qouz Area 2, Al Qouz Industrial Area, 26th Street, D-6, Dubai - UAE.",
+            confidentialityNotice: "The contents of this email and any attachments are confidential. They are intended for the named recipient(s) only. If you have received this email by mistake, please notify the sender immediately and do not disclose the contents to anyone or make copies thereof.",
+            email: "seena.sibu@mixwellcompounding.ae"
+        };
+
+        const persons = [
+            {
+                name: "SEENA SIBU",
+                title: "Compounding Pharmacy Supervisor",
+                mobile: "+971 55 962 5370",
+            },
+            {
+                name: "ESRAA BADRAN",
+                title: "Pharmacy Director",
+                mobile: "+971 52 871 3930",
+            },
+            {
+                name: "ABDALLAH ABOELAZM",
+                title: "Compounding Pharmacist",
+                mobile: "+971 52 776 1430",
+            }
+        ];
+
+        const generateSignature = (person) => `
+      <div class="signature">
+        <div class="name">${person.name}</div>
+        <div class="title">${person.title}</div>
+        <img class="logo"  src="https://bidderwin.com/Mixwell/wp-content/uploads/2025/02/Mixwell-Logo-1-e1738832365851.png"/>
+        <div class="contact-info">
+            <span class="contact-label">Mobile : </span><a href="tel:${person.mobile.replace(/\s/g, '')}">${person.mobile}</a><br>
+            <span class="contact-label">Email : </span><a href="mailto:${globalData.email}">${globalData.email}</a><br>
+          <span class="contact-label">Website : </span><a href="https://${globalData.website}">${globalData.website}</a><br>
+          <span class="contact-label">Location : </span> <span class="location">${globalData.location}</span> 
+        </div>
+        <br style="line-break"/>
+        <div class="disclaimer">
+          ${globalData.confidentialityNotice}
+        </div>
+      </div>
+    `;
+
+        document.getElementById('signatures').innerHTML = persons.map(generateSignature).join('');
+    </script>
+</body>
+
+</html>

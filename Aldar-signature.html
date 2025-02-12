@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif;">
+  <table id="signatureTable" cellpadding="0" cellspacing="0" border="0"
+    style="width: 600px; border-collapse: collapse; font-family: Arial, sans-serif;"></table>
+
+
+  <script>
+
+    const globaldata = {
+      facebook: "https://www.facebook.com/AldarKitchensEquipmentSupplier?mibextid=ZbWKwL",
+      instagram: "https://www.instagram.com/aldar.kitchens/",
+      linkedin: "https://www.linkedin.com/company/al-dar-kitchen-equipment-trading-llc/posts/?feedView=all",
+      location: "PO BOX: 65530 Industrial Area-15, Sharjah, UAE",
+      website: "https://www.aldarkitchen.com/",
+      office: "+971 6 704 3739"
+    }
+
+    const person = [
+      {
+        name: "Kamal C.N.",
+        title: "Director Operations",
+        phone: "+971 55 989 7613",
+        email: "kamal@aldarkitchen.com",
+        profileImg: "https://aldarkitchen.com/emailsignature/kamal.jpg"
+      },
+      {
+        name: "Joseph Raphel",
+        title: "Sales Manager",
+        phone: "+971 58 989 7971",
+        email: "sales@aldarkitchen.com",
+        profileImg: "https://aldarkitchen.com/emailsignature/joseph.jpg"
+      },
+      {
+        name: "Aswin Pavithran",
+        title: "Design Engineer",
+        phone: "+971 58 886 1776",
+        email: "design@aldarkitchen.com",
+        profileImg: "https://aldarkitchen.com/emailsignature/aswin%20pavithran.jpg"
+      },
+      {
+        name: "Akash Binukumar",
+        title: "Admin & Procurement",
+        phone: "+971 58 989 7973",
+        email: "info@aldarkitchen.com",
+        profileImg: "https://aldarkitchen.com/emailsignature/akash.jpg"
+      },
+      {
+        name: "Neethu Jacob",
+        title: "Accounts",
+        phone: "+971 55 376 6551",
+        email: "accounts@aldarkitchen.com",
+        profileImg: "https://aldarkitchen.com/emailsignature/neethu.jpg"
+      },
+      {
+        name: "Juby Thomas",
+        title: "Sales Coordinator",
+        phone: "+971 58 875 7386",
+        email: "sales1@aldarkitchen.com",
+        profileImg: "https://aldarkitchen.com/emailsignature/juby.jpg"
+      },
+      {
+        name: "Sijinesh V.K.",
+        title: "Service Manager",
+        phone: "+971 58 989 7972",
+        email: "service@aldarkitchen.com",
+        profileImg: "https://aldarkitchen.com/emailsignature/sijnesh.jpg"
+      },
+      {
+        name: "Inderjeet",
+        title: "Design Consultant",
+        phone: "+91 995 885 6196",
+        email: "consult@aldarkitchen.com",
+        profileImg: "https://i.pinimg.com/originals/64/eb/ef/64ebefbbd558d77f1a1e0d01a4e050c1.png"
+      },
+    ];
+
+    const generateSignature = (data) => `
+      <tr>
+        <td>
+          <table cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+            <tr>
+              <td style="width: 90px; vertical-align: middle;">
+                <img src="${data.profileImg}" alt="Profile" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;">
+              </td>
+              <td style="vertical-align: middle; padding-left: 10px;">
+                <div style="font-size: 19px; font-weight: bold; color: #333;">${data.name}</div>
+                <div style="font-size: 14px; color: #666;">${data.title}</div>
+              </td>
+              <td style="text-align: right; vertical-align: middle;">
+                <img src="https://aldarkitchen.com/emailsignature/logo.jpeg" alt="Company Logo" style="width: 70px; height: auto;">
+              </td>
+            </tr>
+          </table>
+
+          <hr style="margin: 10px 0;">
+
+          <table cellpadding="0" cellspacing="0" border="0" style="width: 100%; font-size: 14px; color: #333; line-height: 1.6;">
+            <tr><td style="font-weight: bold; width: 80px;">Phone</td><td>: 
+<a href="tel:${data.phone}" style="color: inherit; text-decoration: none;">${data.phone}</a> /
+              <a href="tel:${globaldata.office}" style="color: inherit; text-decoration: none;">${globaldata.office}</a> 
+              
+              </td></tr></td></tr>
+           
+            <tr><td style="font-weight: bold;">Email</td><td>: ${data.email}</td></tr>
+            <tr><td style="font-weight: bold;">Location</td><td>: ${globaldata.location}</td></tr>
+            <tr><td style="font-weight: bold;">Website</td>
+              <td>: <a href="${globaldata.website}" target="_blank" style="color: inherit; text-decoration: none;">${globaldata.website}</a></td></tr>
+          </table>
+
+          <table cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+            <tr>
+              <td style="text-align: right;">
+                <a href="${globaldata.facebook}" target="_blank" style="margin-left: 3px; text-decoration: none;">
+                  <img src="https://aldarkitchen.com/emailsignature/fb.jpeg" alt="Facebook" style="width: 15px; height: 15px;">
+                </a>
+                <a href="${globaldata.instagram}" target="_blank" style="margin-left: 3px; text-decoration: none;">
+                  <img src="https://aldarkitchen.com/emailsignature/insta.jpeg" alt="Instagram" style="width: 15px; height: 15px;">
+                </a>
+                <a href="${globaldata.linkedin}" target="_blank" style="margin-left: 3px; text-decoration: none;">
+                  <img src="https://aldarkitchen.com/emailsignature/linkedin.jpeg" alt="LinkedIn" style="width: 15px; height: 15px;">
+                </a>
+              </td>
+            </tr>
+          </table>
+
+          <table cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+            <tr>
+              <td style="border-radius: 4px; overflow: hidden;">
+                <img src="https://aldarkitchen.com/emailsignature/mainbanner.jpg" alt="Background" style="width: 100%; height: auto; display: block;">
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>`;
+
+    let signatureHTML = "";
+    person.forEach((personData, index) => {
+      signatureHTML += generateSignature(personData);
+
+      if (index < person.length - 1) {
+        signatureHTML += `<tr><td style="height: 70px;"></td></tr>`;
+      }
+    });
+
+    document.getElementById("signatureTable").innerHTML = signatureHTML;
+  </script>
+</body>
+
+</html>
